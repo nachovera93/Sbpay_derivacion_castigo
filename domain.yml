@@ -55,7 +55,7 @@ responses:
   utter_greet_apolo:
   - text: Disculpe, me comunico con {name}?.
   utter_ask_question:
-  - text: '{name}, estamos llamando de S b Pey por su Tarjeta Salco Preunic Visa S b Pay, para informarle que tiene a su disposición distintas alternativas y descuentos para el pago de su deuda. ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?​​'
+  - text: '{name}, estamos llamando de S b Pey por su Tarjeta Salco Preunic, para informarle que tiene a su disposición distintas alternativas y descuentos para el pago de su deuda. ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?​​'
   utter_ask_question_2:
   - text: '{name}, ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?​'
   utter_si_paga:
@@ -69,13 +69,13 @@ responses:
   utter_despedida:
   - text: Muchas gracias por su tiempo, adiós | EXIT
   utter_bot:
-  - text: Estamos llamando de S b Pey por su Tarjeta Salco Preunic Visa S b Pay y Soy un asistente virtual.
+  - text: Estamos llamando de S b Pey por su Tarjeta Salco Preunic y Soy un asistente virtual.
   utter_monto:
   - text: El monto es de {monto} pesos vencida el {fecha_vcto}
   utter_donde:
-  - text: Estamos llamando de S b Pey por su Tarjeta Salco Preunic Visa S b Pay.
+  - text: Estamos llamando de S b Pey por su Tarjeta Salco Preunic.
   utter_donde2:
-  - text: Estamos llamando dde S b Pey por su Tarjeta Salco Preunic Visa S b Pay ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?.
+  - text: Estamos llamando dde S b Pey por su Tarjeta Salco Preunic ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?.
   utter_no_paga:
   - text: Muchas gracias , si cambia de opinión nos puede contactar al número 22 38 0 5 0 38  o nuestro whastapp + 56 9 32 47 78 0 80 | EXIT
   utter_tranfiere:
