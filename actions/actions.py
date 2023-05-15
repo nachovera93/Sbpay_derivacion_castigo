@@ -95,7 +95,7 @@ def update_key_for_customer(customer_id, campaign_group, caller_id, valueContest
         },
         {
             "$set": {
-                "flujo": "Sbpay_derivacion_castigo",
+                "flujo": "Sbpay_derivacion_castigo_preunic",
                 "contesta": valueContesta,
                 "corta": value_to_set,
                 "es_persona_correcta": None,
@@ -311,7 +311,7 @@ class ActionSiPaga(Action):
         },
         {
             "$set": {
-                "flujo": "Sbpay_derivacion_castigo",
+                "flujo": "Sbpay_derivacion_castigo_preunic",
                 "contesta":"si",
                 "corta": "no",
                 "es_persona_correcta": updated_slots["es_persona_correcta"],
