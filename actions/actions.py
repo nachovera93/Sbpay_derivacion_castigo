@@ -317,7 +317,7 @@ class ActionSiPaga(Action):
                 "es_persona_correcta": updated_slots["es_persona_correcta"],
                 "conoce_o_no": updated_slots["conoce_o_no"],
                 "opcion_pago": current_intent,
-                "paga_o_no": updated_slots["paga_o_no"],
+                "paga_o_no": None,
                 "name": updated_slots["name"],
                 "monto": None,
                 "fecha_vcto": updated_slots["fecha_vcto"],
