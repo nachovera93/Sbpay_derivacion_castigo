@@ -98,6 +98,7 @@ def update_key_for_customer(customer_id, campaign_group, caller_id, valueContest
                 "flujo": "Sbpay_derivacion_castigo_preunic",
                 "contesta": valueContesta,
                 "corta": value_to_set,
+                "derivado_o_no":None,
                 "es_persona_correcta": None,
                 "conoce_o_no": None,
                 "opcion_pago": None,
@@ -266,17 +267,16 @@ class ActionSiPaga(Action):
         # Imprimir el nombre de la intención
         print(f'current_intent: {current_intent}')
         print(f'current_intent: {type(current_intent)}')
-        if(current_intent=="opcion_1"):
-            current_intent="Renegociar"
-        elif(current_intent=="opcion_2"):
-            current_intent="Reagendar"
-        elif(current_intent=="opcion_3"):
-            current_intent="Asesoria"
+        if(current_intent=="afirmación"):
+            current_intent="Si"
+        elif(current_intent=="negación"):
+            current_intent="No"
         else:
            current_intent = None
 
         slots_to_update = [
             "name",
+            "derivado_o_no",
             "es_persona_correcta",
             "conoce_o_no",
             "fecha_vcto",
@@ -312,16 +312,17 @@ class ActionSiPaga(Action):
         {
             "$set": {
                 "flujo": "Sbpay_derivacion_castigo_preunic",
-                "contesta":"si",
-                "corta": "no",
+                "contesta":"Si",
+                "corta": "No",
+                "derivado_o_no":current_intent,
                 "es_persona_correcta": updated_slots["es_persona_correcta"],
                 "conoce_o_no": updated_slots["conoce_o_no"],
-                "opcion_pago": current_intent,
+                "opcion_pago": None,
                 "paga_o_no": None,
                 "name": updated_slots["name"],
                 "monto": None,
-                "fecha_vcto": updated_slots["fecha_vcto"],
-                "fecha_pago": updated_slots["fecha_pago"],
+                "fecha_vcto":None,
+                "fecha_pago": None,
                 "phone_number": updated_slots["phone_number"],
                 "created_at": datetime.datetime.now(),
                 "updated_at": datetime.datetime.now()
