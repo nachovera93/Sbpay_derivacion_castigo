@@ -95,7 +95,7 @@ def update_key_for_customer(customer_id, campaign_group, caller_id, valueContest
         },
         {
             "$set": {
-                "flujo": "Sbpay_derivacion_castigo_preunic",
+                "flujo": "sbpay_derivacion_castigo_preunic",
                 "contesta": valueContesta,
                 "corta": value_to_set,
                 "derivado_o_no":None,
@@ -103,7 +103,7 @@ def update_key_for_customer(customer_id, campaign_group, caller_id, valueContest
                 "conoce_o_no": None,
                 "opcion_pago": None,
                 "paga_o_no": "no",
-                "name": names,
+                "name": names.lower(),
                 "monto": None,
                 "fecha_vcto": None,
                 "fecha_pago": None,
@@ -311,15 +311,15 @@ class ActionSiPaga(Action):
         },
         {
             "$set": {
-                "flujo": "Sbpay_derivacion_castigo_preunic",
+                "flujo": "sbpay_derivacion_castigo_preunic",
                 "contesta":"si",
                 "corta": "no",
-                "derivado_o_no":current_intent,
-                "es_persona_correcta": updated_slots["es_persona_correcta"],
-                "conoce_o_no": updated_slots["conoce_o_no"],
+                "derivado_o_no":current_intent.lower(),
+                "es_persona_correcta": updated_slots["es_persona_correcta"].lower(),
+                "conoce_o_no": updated_slots["conoce_o_no"].lower(),
                 "opcion_pago": None,
                 "paga_o_no": None,
-                "name": updated_slots["name"],
+                "name": updated_slots["name"].lower(),
                 "monto": None,
                 "fecha_vcto":None,
                 "fecha_pago": None,
