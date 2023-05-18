@@ -102,7 +102,7 @@ def update_key_for_customer(customer_id, campaign_group, caller_id, valueContest
                 "es_persona_correcta": None,
                 "conoce_o_no": None,
                 "opcion_pago": None,
-                "paga_o_no": "No",
+                "paga_o_no": "no",
                 "name": names,
                 "monto": None,
                 "fecha_vcto": None,
@@ -312,8 +312,8 @@ class ActionSiPaga(Action):
         {
             "$set": {
                 "flujo": "Sbpay_derivacion_castigo_preunic",
-                "contesta":"Si",
-                "corta": "No",
+                "contesta":"si",
+                "corta": "no",
                 "derivado_o_no":current_intent,
                 "es_persona_correcta": updated_slots["es_persona_correcta"],
                 "conoce_o_no": updated_slots["conoce_o_no"],
