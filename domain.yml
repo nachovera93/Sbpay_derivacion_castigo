@@ -75,7 +75,7 @@ responses:
   utter_donde:
   - text: Estamos llamando de S b Pey por su Tarjeta Salco Preunic.
   utter_donde2:
-  - text: Estamos llamando dde S b Pey por su Tarjeta Salco Preunic ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?.
+  - text: Estamos llamando de S b Pey por su Tarjeta Salco Preunic ​¿Desea que lo atienda un ejecutivo para que pueda explicarle todas sus opciones y beneficios?.
   utter_no_paga:
   - text: Muchas gracias , si cambia de opinión nos puede contactar al número 22 38 0 5 0 38  o nuestro whastapp + 56 9 32 47 78 0 80 | EXIT
   utter_tranfiere:
