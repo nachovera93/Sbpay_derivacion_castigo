@@ -286,7 +286,21 @@ class ActionSiPaga(Action):
             "opcion_pago",
             "phone_number"
         ]
-        updated_slots = {slot: tracker.slots.get(slot) or None for slot in slots_to_update}
+        
+        slots_to_lower = [
+            "name",
+            "derivado_o_no",
+            "es_persona_correcta",
+            "conoce_o_no",
+            "paga_o_no",
+            "opcion_pago",
+            
+        ]
+        
+        updated_slots = {slot: (tracker.slots.get(slot).lower() if tracker.slots.get(slot) else None) 
+                         if slot in slots_to_lower 
+                         else tracker.slots.get(slot) or None 
+                         for slot in slots_to_update}
 
         print(f'name: {updated_slots["name"]}')
         print(f'es_persona_correcta: {updated_slots["es_persona_correcta"]}')
@@ -315,11 +329,11 @@ class ActionSiPaga(Action):
                 "contesta":"si",
                 "corta": "no",
                 "derivado_o_no":current_intent.lower(),
-                "es_persona_correcta": updated_slots["es_persona_correcta"].lower(),
-                "conoce_o_no": updated_slots["conoce_o_no"].lower(),
+                "es_persona_correcta": updated_slots["es_persona_correcta"],
+                "conoce_o_no": updated_slots["conoce_o_no"],
                 "opcion_pago": None,
                 "paga_o_no": None,
-                "name": updated_slots["name"].lower(),
+                "name": updated_slots["name"],
                 "monto": None,
                 "fecha_vcto":None,
                 "fecha_pago": None,
