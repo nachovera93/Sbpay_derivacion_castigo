@@ -11,13 +11,10 @@ rules:
 
 
   - rule: Repetir la última pregunta cuando no se entiende la respuesta
-    condition:
-    - slot_was_set:
-      - predicted_intent: nlu_fallback
     steps:
-    - action: action_repeat_last_question
-    - intent: ANY  # Agrega esta línea
-    - action: action_listen  # Agrega esta línea
+    - action: nlu_fallback
+    - action: utter_out_of_scope
+  # Agrega esta línea
 
 
   - rule: eres bot1?

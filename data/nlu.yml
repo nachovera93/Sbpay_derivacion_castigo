@@ -132,6 +132,7 @@ nlu:
     - [en la noche](respuesta)
     - [en la mañana](respuesta)
     - [mañana en la mañana porfa](respuesta)
+    
 - intent: saludos
   examples: |
     - hola
