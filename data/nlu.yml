@@ -111,6 +111,27 @@ nlu:
     - estoy corto de dinero [no](respuesta) puedo pagar
     - [no](respuesta) tengo plata ahora
     - [no](respuesta) cuento con el dinero en este momento
+    - [mas tarde] puede ser?
+    - [mañana](respuesta)
+    - [otro día](respuesta)
+    - [la proxima semana](respuesta)
+    - [el proximo mes](respuesta)
+    - [ el proximo año](respuesta)
+    - [llameme otro día](respuesta)
+    - [me pagan la proxima semana]
+    - [me pagan otro día]
+    - [no](respuesta) esta vez
+    - [no](respuesta) en esta ocasión
+    - [no](respuesta) hoy
+    - [no](respuesta) ahora
+    - [no](respuesta) lo veo factible
+    - [no](respuesta) estoy de acuerdo
+    - definitivamente [no](respuesta)
+    - ni en sueños [no](respuesta)
+    - [como a las 4](respuesta)
+    - [en la noche](respuesta)
+    - [en la mañana](respuesta)
+    - [mañana en la mañana porfa](respuesta)
 - intent: saludos
   examples: |
     - hola
